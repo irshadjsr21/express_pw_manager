@@ -109,7 +109,7 @@ app.get('/password/update/:id', function (req, res) {
 
 
 });
-app.put('/password/update/:id', function (req, res) {
+app.post('/password/update/:id', function (req, res) {
     let id = req.params.id;
     let sql = `UPDATE password SET ? WHERE id = '${id}'`;
     let query = db.query(sql, (err, result) => {
